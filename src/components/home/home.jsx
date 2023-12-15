@@ -1,9 +1,12 @@
 import './Home.css';
 
 function Home () {
+    const userName = 'Username';
+
     return (
         <>
-            <h1>Home</h1>
+            <h1>Welcome {userName}!</h1>
+            
         </>
     )
 }
