@@ -35,4 +35,6 @@ Fitness app that makes it easier for people to plan their exercises and create n
    6. Admin interface
    7. Login/Logout
 4. Connect the project with a server database
+5. Implement tailwind
+6. 
 
