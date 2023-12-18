@@ -7,22 +7,22 @@ function Nav() {
         <div className='Nav'>
             <ul>
                 <li>
-                    <NavLink to="/">Fitness</NavLink>
+                    <NavLink to="/" className='navLink'>Fitness</NavLink>
                 </li>
                 <li>
-                    <NavLink end to="/exercises">Exercises</NavLink>
+                    <NavLink end to="/exercises" className='navLink'>Exercises</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/routines">Routines</NavLink>
+                    <NavLink to="/routines" className='navLink'>Routines</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/plan">Plan</NavLink>
+                    <NavLink to="/plan" className='navLink'>Plan</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/blog">Blog</NavLink>
+                    <NavLink to="/blog" className='navLink'>Blog</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/settings">Settings</NavLink>
+                    <NavLink to="/settings" className='navLink'>Settings</NavLink>
                 </li>
             </ul>
         </div>

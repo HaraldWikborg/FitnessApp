@@ -14,7 +14,7 @@ import Exercise from './components/exercise/exercises';
 function App() {
 
   return (
-    <>
+    <div className='App'>
     <Nav />
     <Routes>
       <Route path='/' element={<Home />}/>
@@ -29,7 +29,7 @@ function App() {
       <Route path='/settings' element={<Settings />}/>
       <Route path='*' element={<NotFound />}/>
     </Routes>
-    </>
+    </div>
   )
 }
 
