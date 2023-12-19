@@ -1,15 +1,28 @@
-import { useLocation } from 'react-router-dom';
-import './ExercisesList.css';
+import "./ExercisesList.css";
+import exerciseList from "../../assets/data/exercises";
 
-function ExercisesList ({ type }) {
-    const location = useLocation();
-    
-    return (
-        <div className='List'>
-            <h1>{location.state}</h1>
-            
-        </div>
-    )
+function ExercisesList() {
+  return (
+    <div className="ExercisesList">
+      <div className="exercisesList">
+        {Object.keys(exerciseList).map((exerciseKey, index) => {
+          const exercise = exerciseList[exerciseKey];
+          return (
+            <div className="exerciseCard" key={index}>
+              <div className="title">{exercise.name}</div>
+              <div className="description">
+                {exercise.PR ? `Your PR: ${exercise.PR}` : ""}
+                <br />
+                Muscle groups:{" "}
+                {exercise.muscleGroup.map((muscle) => muscle + " ")}
+              </div>
+              <div className="button">Add</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default ExercisesList;
