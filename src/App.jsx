@@ -9,13 +9,14 @@ import Plan from './components/plan/Plan';
 import Blog from './components/blog/Blog';
 import Settings from './components/settings/Settings';
 import NotFound from './components/notFound/notFound';
-import Exercise from './components/exercise/exercises';
+import Exercise from './components/exercise/Exercise';
 
 function App() {
 
   return (
     <div className='App'>
     <Nav />
+    <div className='content'>
     <Routes>
       <Route path='/' element={<Home />}/>
       <Route path='/exercises' > 
@@ -29,6 +30,7 @@ function App() {
       <Route path='/settings' element={<Settings />}/>
       <Route path='*' element={<NotFound />}/>
     </Routes>
+    </div>
     </div>
   )
 }

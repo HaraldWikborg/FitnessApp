@@ -7,9 +7,9 @@ function Nav() {
         <div className='Nav'>
             <ul>
                 <li>
-                    <NavLink to="/" className='navLink'>Fitness</NavLink>
+                    <NavLink to="/" className='navLink homeNav'>Fitness</NavLink>
                 </li>
-                <li>
+                <li className='listElement'>
                     <NavLink end to="/exercises" className='navLink'>Exercises</NavLink>
                 </li>
                 <li>
@@ -22,7 +22,7 @@ function Nav() {
                     <NavLink to="/blog" className='navLink'>Blog</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/settings" className='navLink'>Settings</NavLink>
+                    <NavLink to="/settings" className='navLink settingsNav'>Settings</NavLink>
                 </li>
             </ul>
         </div>
