@@ -10,14 +10,17 @@ import Blog from "./components/blog/Blog";
 import Settings from "./components/settings/Settings";
 import NotFound from "./components/notFound/notFound";
 import Exercise from "./components/exercise/Exercise";
+import LoginForm from "./logIn/login";
 
 function App() {
+  //localStorage.clear();
   return (
     <div className="App">
       <Nav />
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LoginForm />} />
           <Route path="/exercises">
             <Route index element={<Exercises />} />
             <Route path="list" element={<ExercisesList />} />
