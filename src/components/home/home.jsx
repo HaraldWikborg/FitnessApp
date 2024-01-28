@@ -10,7 +10,7 @@ function Home() {
     <div className="home">
       {user ? (
         <>
-          <h1>Welcome {user.username}!</h1>
+          <h1 className="welcome">Welcome {user.username}!</h1>
           <ProfileCard />
         </>
       ) : (
