@@ -1,6 +1,7 @@
 import "./Routines.css";
 import { useState } from "react";
 import routinesList from "../../assets/data/routines";
+import RoutineExercisesList from "./routineExercisesList/routineExercisesList";
 
 function Routines() {
   const [routines] = useState(routinesList);
@@ -15,23 +16,12 @@ function Routines() {
           //exercises wont be treated as an array even though it logs as one
           return (
             <div className="routineCard" key={index}>
-              <div className="title">{routine.name}</div>
-              <div className="exercises">
-                {exercises && Array.isArray(exercises)
-                  ? exercises.map((exercise, index) => {
-                      return (
-                        <div className="exerciseCard" key={index}>
-                          <div className="exerciseName">{exercise.name}</div>
-                          <div className="exerciseSets">{exercise.sets}</div>
-                        </div>
-                      );
-                    })
-                  : null}
-              </div>
-              <div className="button">Add</div>
+              <div className="routineTitle">{routine.name}</div>
+              <RoutineExercisesList exercises={exercises} />
             </div>
           );
         })}
+        <div className="editButton">Edit / Add</div>
       </div>
     </div>
   );

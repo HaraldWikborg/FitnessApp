@@ -1,0 +1,52 @@
+.routines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.routinesList {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.routineTitle {
+  background-color: #bd9166;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+.routineCard {
+  background-color: #4f4841;
+  border-radius: 1rem;
+  padding: 0px;
+}
+.exercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.editButton {
+  background-color: #ff6c17;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: black;
+  height: fit-content;
+  text-decoration: none;
+  align-self: center;
+  text-align: center;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.editButton:hover {
+  background-color: gray;
+}
