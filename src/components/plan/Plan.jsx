@@ -34,9 +34,8 @@ const Plan = () => {
     }));
   };
 
-  // Function to handle saving activities
   const saveActivities = () => {
-    // Here you can implement saving activities, for example, sending them to a server or storing them locally.
+    // implement saving activities to a server or storing them locally.
     setCustomSet(true);
     console.log("Activities saved:", activities);
     alert("Activities saved successfully!");
