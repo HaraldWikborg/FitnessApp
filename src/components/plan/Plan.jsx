@@ -1,53 +1,66 @@
 import React, { useState } from "react";
 import "./Plan.css";
+import EditPlan from "./EditPlan";
+import CustomPlan from "./CustomPlan";
 
 const Plan = () => {
-  const [events, setEvents] = useState([]);
+  // Initialize state to hold activities for each day, with empty string as default.
+  const [activities, setActivities] = useState({
+    Monday: "",
+    Tuesday: "",
+    Wednesday: "",
+    Thursday: "",
+    Friday: "",
+    Saturday: "",
+    Sunday: "",
+  });
+  //initialize state to hold default activity options
+  const [activityOptions, setActivityOptions] = useState([
+    "Chest",
+    "Back",
+    "Legs and shoulders",
+    "Core",
+    "Cardio",
+    "Rest",
+  ]);
+  const [customSet, setCustomSet] = useState(false);
 
-  const addEvent = (day, event) => {
-    const updatedEvents = [...events];
-    if (updatedEvents.find((e) => e.day === day)) {
-      updatedEvents.forEach((e) => {
-        if (e.day === day) {
-          e.event = event;
-        }
-      });
-    } else {
-      updatedEvents.push({ day, event });
-    }
-    setEvents(updatedEvents);
+  // Function to handle changes in activity selection
+  const handleActivityChange = (day, event) => {
+    const { value } = event.target;
+    setActivities((prevState) => ({
+      ...prevState,
+      [day]: value,
+    }));
   };
 
-  const renderCalendarDays = () => {
-    const calendarDays = [...Array(31).keys()].map((day) => (
-      <div key={day} className="calendarDay">
-        <span className="dayNumber">{day + 1}</span>
-        {events.map((event) =>
-          event.day === day + 1 ? (
-            <div key={event.day} className="event">
-              {event.event}
-            </div>
-          ) : null
-        )}
-        <select
-          className="addButton"
-          onChange={(e) => addEvent(day + 1, e.target.value)}
-        >
-          <option value="Rest">Rest</option>
-          <option value="Chest and tricep">Chest and tricep</option>
-          <option value="Back and bicep">Back and bicep</option>
-          <option value="Legs and shoulders">Legs and shoulders</option>
-        </select>
-      </div>
-    ));
-
-    return calendarDays;
+  // Function to handle saving activities
+  const saveActivities = () => {
+    // Here you can implement saving activities, for example, sending them to a server or storing them locally.
+    setCustomSet(true);
+    console.log("Activities saved:", activities);
+    alert("Activities saved successfully!");
   };
-
+  const edit = () => {
+    setCustomSet(false);
+  };
   return (
-    <div className="calendar">
-      <h2>Monthly Calendar</h2>
-      <div className="calendarDays">{renderCalendarDays()}</div>
+    <div>
+      {customSet ? (
+        <CustomPlan
+          activities={activities}
+          activityOptions={activityOptions}
+          handleActivityChange={handleActivityChange}
+          edit={edit}
+        />
+      ) : (
+        <EditPlan
+          activities={activities}
+          activityOptions={activityOptions}
+          handleActivityChange={handleActivityChange}
+          saveActivities={saveActivities}
+        />
+      )}
     </div>
   );
 };
