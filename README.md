@@ -39,3 +39,24 @@ Fitness app that makes it easier for people to plan their exercises and create n
 
 ### Notes
     Try using signals instead of react hooks
+
+## Todo
+- edit/add function for routines component
+- add blog component
+- add settings component
+- add admin component
+- add login/logout component
+- add server database (Express, MongoDB)
+- move mock data into server database
+- add user authentication
+- add user settings
+- add user profile
+- add user workout history
+- add tests for the app
+- add tests for the server
+- add CI/CD
+- add deployment
+- add documentation
+- add comments to the code
+- add error handling
+- add loading animations
