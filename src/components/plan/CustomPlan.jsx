@@ -6,7 +6,7 @@ const CustomPlan = ({
 }) => {
   return (
     <div>
-      <h2 className="title">Weekly Calendar</h2>
+      <h2 className="calendarTitle">Weekly Calendar</h2>
       <div className="calendar">
         <table>
           <thead>
@@ -17,9 +17,9 @@ const CustomPlan = ({
           </thead>
           <tbody>
             {Object.keys(activities).map((day) => (
-              <tr key={day}>
+              <tr className="row" key={day}>
                 <td>{day}</td>
-                <td>{activities[day]}</td>
+                <td className="activity">{activities[day]}</td>
               </tr>
             ))}
           </tbody>

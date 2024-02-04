@@ -4,7 +4,14 @@ import routinesList from "../../assets/data/routines";
 import RoutineExercisesList from "./routineExercisesList/routineExercisesList";
 
 function Routines() {
-  const [routines] = useState(routinesList);
+  const [routines, setRoutines] = useState(routinesList);
+
+  const handleEdit = () => {
+    console.log("Edit");
+  };
+  const handleAdd = () => {
+    console.log("Add");
+  };
 
   return (
     <div className="routines">
@@ -12,8 +19,6 @@ function Routines() {
         {routines.map((routineKey, index) => {
           let routine = routineKey;
           let exercises = routine.exercises;
-          console.log(exercises);
-          //exercises wont be treated as an array even though it logs as one
           return (
             <div className="routineCard" key={index}>
               <div className="routineTitle">{routine.name}</div>
@@ -21,7 +26,14 @@ function Routines() {
             </div>
           );
         })}
-        <div className="editButton">Edit / Add</div>
+      </div>
+      <div className="buttons">
+        <button className="editButton" onClick={handleEdit}>
+          Edit
+        </button>
+        <button className="editButton" onClick={handleAdd}>
+          Add
+        </button>
       </div>
     </div>
   );

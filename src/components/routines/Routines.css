@@ -11,6 +11,7 @@
   align-items: top;
   justify-content: space-evenly;
   width: 100%;
+  gap: 1rem;
 }
 .routineTitle {
   background-color: #bd9166;
@@ -25,6 +26,10 @@
   background-color: #4f4841;
   border-radius: 1rem;
   padding: 0px;
+  width: fit-content;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 30%;
 }
 .exercise {
   display: flex;
@@ -32,6 +37,16 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
 }
 .editButton {
   background-color: #ff6c17;
@@ -41,11 +56,11 @@
   color: black;
   height: fit-content;
   text-decoration: none;
-  align-self: center;
   text-align: center;
   font-size: large;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 1rem;
 }
 .editButton:hover {
   background-color: gray;

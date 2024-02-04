@@ -6,7 +6,7 @@ const EditPlan = ({
 }) => {
   return (
     <div>
-      <h2>Weekly Calendar</h2>
+      <h2 className="calendarTitle">Weekly Calendar</h2>
       <div className="calendar">
         <table>
           <thead>

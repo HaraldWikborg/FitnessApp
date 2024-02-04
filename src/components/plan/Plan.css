@@ -1,6 +1,16 @@
-table {
-  width: 35%;
+.calendarTitle {
+  background-color: #82786f;
+  font-size: 2rem;
+  width: fit-content;
+  padding: 1rem 2rem;
   border-radius: 1rem;
+}
+
+table {
+  width: 40%;
+  border-radius: 1rem;
+  background-color: #82786f;
+  border-spacing: 0;
 }
 .calendar {
   display: flex;
@@ -11,18 +21,32 @@ th,
 td {
   padding: 8px;
   text-align: left;
-  border-bottom: 2px solid #82786f;
   text-align: center;
 }
 
-th {
+table tr:first-child th:first-child {
   background-color: #bd9166;
-  border-radius: 1rem;
+  color: black;
+  font-weight: bold;
+  border-top-left-radius: 1rem;
+  border-bottom: 1px solid black;
+}
+table tr:first-child th:last-child {
+  background-color: #bd9166;
+  color: black;
+  font-weight: bold;
+  border-top-right-radius: 1rem;
+  border-bottom: 1px solid black;
 }
 
+table tr td {
+  border-bottom: 1px solid black;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
 select {
   padding: 8px;
-  border: 1px solid #ccc;
   border-radius: 1rem;
   font-size: 14px;
   background-color: #bd9166;
@@ -33,6 +57,7 @@ select {
 select:hover {
   border-color: #ff6c17;
 }
+
 .edit {
   background-color: #ff6c17;
   margin-left: 2rem;
@@ -51,7 +76,7 @@ select:hover {
 .edit:hover {
   background-color: gray;
 }
-tbody {
-  border-radius: 1rem;
-  background-color: gray;
+
+.activity {
+  font-weight: bold;
 }
