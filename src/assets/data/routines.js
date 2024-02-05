@@ -1,7 +1,7 @@
 //Mock data for routines
 const routines = [
   {
-    id: 1,
+    id: 0,
     name: "Chest and Tricep",
     exercises: [
       {
@@ -122,7 +122,7 @@ const routines = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     name: "Back and Bicep",
     exercises: [
       {
@@ -222,7 +222,7 @@ const routines = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: "Legs and Shoulders",
     exercises: [
       {

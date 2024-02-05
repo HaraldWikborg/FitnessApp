@@ -13,6 +13,15 @@
   width: 100%;
   gap: 1rem;
 }
+.cardCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  align-items: stretch;
+}
 .routineTitle {
   background-color: #bd9166;
   font-size: 2rem;
@@ -21,6 +30,7 @@
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 .routineCard {
   background-color: #4f4841;
@@ -29,7 +39,10 @@
   width: fit-content;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 30%;
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 .exercise {
   display: flex;
@@ -63,5 +76,21 @@
   margin: 1rem;
 }
 .editButton:hover {
+  background-color: gray;
+}
+.deleteButton {
+  background-color: #ff6c17;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 1rem;
+  justify-self: end;
+}
+.deleteButton:hover {
   background-color: gray;
 }

@@ -1,40 +1,44 @@
 import "./Routines.css";
 import { useState } from "react";
 import routinesList from "../../assets/data/routines";
-import RoutineExercisesList from "./routineExercisesList/routineExercisesList";
-
+import NewRoutine from "./subComp/NewRoutine.jsx";
+import RoutineList from "./subComp/RoutineList.jsx";
 function Routines() {
   const [routines, setRoutines] = useState(routinesList);
+  const [edit, setEdit] = useState(false);
+  const [add, setAdd] = useState(false);
 
   const handleEdit = () => {
-    console.log("Edit");
+    setEdit(true);
   };
   const handleAdd = () => {
-    console.log("Add");
+    setAdd(true);
   };
-
+  const deleteItem = (e) => {
+    let newRoutines = [...routines];
+    console.log("ID: " + e.target.id);
+    let index = newRoutines.findIndex((routine) => routine.id == e.target.id);
+    newRoutines.splice(index, 1);
+    setRoutines(newRoutines);
+  };
   return (
     <div className="routines">
-      <div className="routinesList">
-        {routines.map((routineKey, index) => {
-          let routine = routineKey;
-          let exercises = routine.exercises;
-          return (
-            <div className="routineCard" key={index}>
-              <div className="routineTitle">{routine.name}</div>
-              <RoutineExercisesList exercises={exercises} />
-            </div>
-          );
-        })}
-      </div>
-      <div className="buttons">
-        <button className="editButton" onClick={handleEdit}>
-          Edit
-        </button>
-        <button className="editButton" onClick={handleAdd}>
-          Add
-        </button>
-      </div>
+      {add ? (
+        <NewRoutine
+          routines={routines}
+          setRoutines={setRoutines}
+          setAdd={setAdd}
+        />
+      ) : (
+        <RoutineList
+          routines={routines}
+          handleAdd={handleAdd}
+          handleEdit={handleEdit}
+          edit={edit}
+          setEdit={setEdit}
+          deleteItem={deleteItem}
+        />
+      )}
     </div>
   );
 }
