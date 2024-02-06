@@ -15,8 +15,8 @@ const RoutineList = ({
           let routine = routineKey;
           let exercises = routine.exercises;
           return (
-            <div className="cardCont">
-              <div className="routineCard" key={index}>
+            <div className="cardCont" key={index}>
+              <div className="routineCard">
                 <div className="routineTitle">{routine.name}</div>
                 <RoutineExercisesList exercises={exercises} />
               </div>

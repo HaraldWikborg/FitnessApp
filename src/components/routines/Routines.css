@@ -94,3 +94,26 @@
 .deleteButton:hover {
   background-color: gray;
 }
+
+/* New Routine */
+.routineForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  background-color: #4f4841;
+  border-radius: 1rem;
+}
+.routineLabel {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

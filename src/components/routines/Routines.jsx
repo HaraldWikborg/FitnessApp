@@ -1,5 +1,5 @@
 import "./Routines.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import routinesList from "../../assets/data/routines";
 import NewRoutine from "./subComp/NewRoutine.jsx";
 import RoutineList from "./subComp/RoutineList.jsx";
@@ -21,6 +21,7 @@ function Routines() {
     newRoutines.splice(index, 1);
     setRoutines(newRoutines);
   };
+
   return (
     <div className="routines">
       {add ? (

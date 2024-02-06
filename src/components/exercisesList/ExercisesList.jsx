@@ -25,21 +25,21 @@ function ExercisesList() {
         <div className="filter1">
           <label className="label" htmlFor="muscleGroup">
             Muscle Group
+            <select
+              onChange={handleFilterChange}
+              id="muscleGroup"
+              name="muscleGroup"
+            >
+              <option value="all">All</option>
+              <option value="chest">Chest</option>
+              <option value="back">Back</option>
+              <option value="shoulder">Shoulder</option>
+              <option value="legs">Legs</option>
+              <option value="tricep">Triceps</option>
+              <option value="bicep">Biceps</option>
+              <option value="abs">Core</option>
+            </select>
           </label>
-          <select
-            onChange={handleFilterChange}
-            id="muscleGroup"
-            name="muscleGroup"
-          >
-            <option value="all">All</option>
-            <option value="chest">Chest</option>
-            <option value="back">Back</option>
-            <option value="shoulder">Shoulder</option>
-            <option value="legs">Legs</option>
-            <option value="tricep">Triceps</option>
-            <option value="bicep">Biceps</option>
-            <option value="abs">Core</option>
-          </select>
         </div>
       </div>
       <div className="exercisesList">

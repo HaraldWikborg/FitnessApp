@@ -6,7 +6,7 @@ const RoutineExercisesList = ({ exercises }) => {
       {exercises.map((exercise, index) => (
         <div className="exercise" key={index}>
           <h3>{exercise.name}</h3>
-          <p>Sets: {exercise.sets.length}</p>
+          <p>Sets: </p>
         </div>
       ))}
     </div>
