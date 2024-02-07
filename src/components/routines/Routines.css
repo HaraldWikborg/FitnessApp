@@ -35,7 +35,6 @@
 .routineCard {
   background-color: #4f4841;
   border-radius: 1rem;
-  padding: 0px;
   width: fit-content;
   flex-grow: 1;
   flex-shrink: 1;
@@ -50,6 +49,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  text-align: center;
+}
+.exercise h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0px;
+  padding: 1rem;
 }
 
 /* Buttons */
@@ -105,6 +111,8 @@
   gap: 1rem;
   background-color: #4f4841;
   border-radius: 1rem;
+  padding: 2rem;
+  width: fit-content;
 }
 .routineLabel {
   font-size: 1.5rem;
@@ -116,4 +124,85 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.routineInput {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: large;
+  width: 100%;
+  margin: 0.5rem;
+  background-color: #bd9166;
+  color: black;
+  font-weight: bold;
+}
+.addedExercises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  background-color: #4f4841;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: fit-content;
+}
+.addedExercises p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.numberInput {
+  border-radius: 1rem;
+  font-size: large;
+  width: fit-content;
+  margin: 0.5rem;
+  background-color: #bd9166;
+  color: black;
+  font-weight: bold;
+}
+.exercisesForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #4f4841;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: fit-content;
+}
+.filterLabel {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.addExerciseButton {
+  background-color: #bd9166;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: black;
+  height: fit-content;
+  text-align: center;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 1rem;
+}
+.addExerciseButton:hover {
+  background-color: gray;
+}
+
+.removeButton {
+  background-color: #bd9166;
+  border-radius: 1rem;
+  color: black;
+  height: fit-content;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0.2rem;
+  border: none;
+}
+.removeButton:hover {
+  background-color: gray;
 }

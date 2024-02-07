@@ -1,4 +1,4 @@
-import RoutineExercisesList from "../routineExercisesList/routineExercisesList.jsx";
+import RoutineExercisesList from "./routineExercisesList.jsx";
 
 const RoutineList = ({
   routines,

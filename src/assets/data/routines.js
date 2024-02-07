@@ -7,117 +7,27 @@ const routines = [
       {
         id: 1,
         name: "Bench Press",
-        sets: [
-          {
-            id: 1,
-            reps: 12,
-            weight: 20,
-          },
-          {
-            id: 2,
-            reps: 10,
-            weight: 60,
-          },
-          {
-            id: 3,
-            reps: 6,
-            weight: 110,
-          },
-          {
-            id: 4,
-            reps: 5,
-            weight: 110,
-          },
-          {
-            id: 5,
-            reps: 5,
-            weight: 110,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 2,
         name: "Decline Bench Press",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 3,
         name: "Chest Flies",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 4,
         name: "Tricep Pull Downs",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [5, 8, 2],
       },
       {
         id: 5,
         name: "Over Head Pulls",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [5, 8, 2, 2],
       },
     ],
   },
@@ -128,96 +38,22 @@ const routines = [
       {
         id: 1,
         name: "Pull Ups",
-        sets: [
-          {
-            id: 1,
-            reps: 12,
-            weight: 20,
-          },
-          {
-            id: 2,
-            reps: 10,
-            weight: 60,
-          },
-          {
-            id: 3,
-            reps: 6,
-            weight: 110,
-          },
-          {
-            id: 4,
-            reps: 5,
-            weight: 110,
-          },
-          {
-            id: 5,
-            reps: 5,
-            weight: 110,
-          },
-        ],
+        sets: [20, 15, 10, 5, 5],
       },
       {
         id: 2,
         name: "Bicep Curls",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 3,
         name: "Back Flies",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 4,
         name: "Rows",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
     ],
   },
@@ -228,54 +64,12 @@ const routines = [
       {
         id: 1,
         name: "Squats",
-        sets: [
-          {
-            id: 1,
-            reps: 12,
-            weight: 20,
-          },
-          {
-            id: 2,
-            reps: 10,
-            weight: 60,
-          },
-          {
-            id: 3,
-            reps: 6,
-            weight: 110,
-          },
-          {
-            id: 4,
-            reps: 5,
-            weight: 110,
-          },
-          {
-            id: 5,
-            reps: 5,
-            weight: 110,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
       {
         id: 2,
         name: "Leg Press",
-        sets: [
-          {
-            id: 1,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 2,
-            reps: 8,
-            weight: 135,
-          },
-          {
-            id: 3,
-            reps: 8,
-            weight: 135,
-          },
-        ],
+        sets: [10, 8, 6, 5],
       },
     ],
   },

@@ -4,6 +4,8 @@ class Exercise {
     this.muscleGroup = muscleGroup;
     this.PR = PR;
     this.equipment = equipment;
+    this.id = Math.floor(Math.random() * 10000);
+    this.sets = [];
   }
   setPR(PR) {
     this.PR = PR;
@@ -19,6 +21,9 @@ class Exercise {
   }
   getName() {
     return this.name;
+  }
+  setSets(sets) {
+    this.sets = sets;
   }
 }
 

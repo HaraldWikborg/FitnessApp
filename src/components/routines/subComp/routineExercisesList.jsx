@@ -2,14 +2,19 @@ import React from "react";
 
 const RoutineExercisesList = ({ exercises }) => {
   return (
-    <div className="exercise">
+    <>
       {exercises.map((exercise, index) => (
         <div className="exercise" key={index}>
           <h3>{exercise.name}</h3>
-          <p>Sets: </p>
+          <p>
+            Sets:
+            {exercise.sets.map((set, index) => (
+              <span key={index}>{set}, </span>
+            ))}
+          </p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

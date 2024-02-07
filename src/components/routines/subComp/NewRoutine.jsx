@@ -25,14 +25,16 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
     setRoutines((routines) => [...routines, newRoutine]);
     setAdd(false);
   };
+
   const addExercise = () => {
     let exercise = document.getElementById("exercises").value;
     let newExercise = exerciseList.find((ex) => ex.name === exercise);
+    let numberOfSets = document.getElementById("sets").value;
+    newExercise.setSets(new Array(parseInt(numberOfSets)).fill(1));
     setAddedExercises((addedExercises) => [...addedExercises, newExercise]);
-    console.log(addedExercises);
   };
+
   const handleFilterChange = (e) => {
-    console.log(e.target.value);
     setFilter(e.target.value);
     const filtered = exerciseList.filter((exercise) => {
       if (e.target.value === "all") {
@@ -43,11 +45,19 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
     });
     setFilteredExercises(filtered);
   };
+
+  const removeEx = (e) => {
+    let id = e.target.parentElement.id;
+    let newExercises = addedExercises.filter((ex) => ex.id != id);
+    setAddedExercises(newExercises);
+  };
+  //Add function to update reps for each set when changed
   return (
     <form className="routineForm" onSubmit={handleSubmit}>
       <label className="routineLabel">
         Routine Title:
         <input
+          required
           className="routineInput"
           type="text"
           value={routineTitle}
@@ -58,8 +68,30 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
         {addedExercises ? (
           addedExercises.map((exercise, index) => {
             return (
-              <div className="addedExercise" key={index}>
-                {exercise.name}
+              <div id={exercise.id} className="addedExercise" key={index}>
+                <p>{exercise.name}</p>
+                <label>
+                  Reps:
+                  {exercise.sets.map((set, index) => {
+                    return (
+                      <input
+                        key={index}
+                        min={1}
+                        max={99}
+                        defaultValue="1"
+                        className="numberInput"
+                        type="number"
+                      />
+                    );
+                  })}
+                </label>
+                <button
+                  className="removeButton"
+                  type="button"
+                  onClick={removeEx}
+                >
+                  X
+                </button>
               </div>
             );
           })
@@ -70,8 +102,8 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
       <div className="exercisesForm">
         <label className="routineLabel">
           Add exercises to routine:
-          <label htmlFor="muscleGroup">
-            Muscle Group:
+          <label className="filterLabel" htmlFor="muscleGroup">
+            Filter:
             <select
               onChange={handleFilterChange}
               id="muscleGroup"
@@ -88,7 +120,7 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
             </select>
           </label>
         </label>
-        <label htmlFor="exercises">
+        <label className="filterLabel" htmlFor="exercises">
           Exercises:
           <select id="exercises" name="exercises">
             {filteredExercises.map((exercise, index) => {
@@ -99,6 +131,17 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
               );
             })}
           </select>
+          <label className="filterLabel" htmlFor="sets">
+            Sets:
+            <input
+              className="numberInput"
+              type="number"
+              id="sets"
+              defaultValue="1"
+              min="1"
+              max="9"
+            />
+          </label>
         </label>
         <button
           type="button"
