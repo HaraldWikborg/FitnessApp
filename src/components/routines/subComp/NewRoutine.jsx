@@ -26,15 +26,21 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
   };
 
   const addExercise = () => {
-    let exercise = document.getElementById("exercises").value;
-    let newExercise = exerciseList.find((ex) => ex.name === exercise);
-    let uniqueId = Math.floor(Math.random() * 10000);
-    newExercise.id = uniqueId;
-    console.log(newExercise.id);
     let numberOfSets = document.getElementById("sets").value;
-    newExercise.setSets(new Array(parseInt(numberOfSets)).fill(1));
-    setAddedExercises((addedExercises) => [...addedExercises, newExercise]);
-    console.log(addedExercises);
+    if (1 > numberOfSets || numberOfSets > 9) {
+      alert("Please enter a valid number of sets");
+      return;
+    }
+    let exerciseName = document.getElementById("exercises").value;
+    let exercise = exerciseList.find((ex) => ex.name === exerciseName);
+    let uniqueId = Math.floor(Math.random() * 10000);
+    console.log(exercise);
+    let newExercise = {
+      ...exercise,
+      id: uniqueId,
+      sets: new Array(parseInt(numberOfSets)).fill(1),
+    };
+    setAddedExercises((addedEx) => [...addedEx, newExercise]);
   };
 
   const handleFilterChange = (e) => {
