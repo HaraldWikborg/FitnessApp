@@ -10,6 +10,9 @@ class Exercise {
   setPR(PR) {
     this.PR = PR;
   }
+  setId(id) {
+    this.id = id;
+  }
   getPR() {
     return this.PR;
   }

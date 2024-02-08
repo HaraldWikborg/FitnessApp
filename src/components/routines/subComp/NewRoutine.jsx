@@ -21,7 +21,6 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
       name: routineTitle,
       exercises: [...addedExercises],
     };
-    console.log(newRoutine);
     setRoutines((routines) => [...routines, newRoutine]);
     setAdd(false);
   };
@@ -29,9 +28,13 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
   const addExercise = () => {
     let exercise = document.getElementById("exercises").value;
     let newExercise = exerciseList.find((ex) => ex.name === exercise);
+    let uniqueId = Math.floor(Math.random() * 10000);
+    newExercise.id = uniqueId;
+    console.log(newExercise.id);
     let numberOfSets = document.getElementById("sets").value;
     newExercise.setSets(new Array(parseInt(numberOfSets)).fill(1));
     setAddedExercises((addedExercises) => [...addedExercises, newExercise]);
+    console.log(addedExercises);
   };
 
   const handleFilterChange = (e) => {
@@ -48,10 +51,17 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
 
   const removeEx = (e) => {
     let id = e.target.parentElement.id;
+    console.log("removing" + id);
     let newExercises = addedExercises.filter((ex) => ex.id != id);
     setAddedExercises(newExercises);
   };
-  //Add function to update reps for each set when changed
+  const handleRepsChange = (e) => {
+    let key = e.target.name;
+    let exerciseId = e.target.parentElement.parentElement.id;
+    let value = e.target.value;
+    let exercise = addedExercises.find((ex) => ex.id == exerciseId);
+    exercise.sets[key] = value;
+  };
   return (
     <form className="routineForm" onSubmit={handleSubmit}>
       <label className="routineLabel">
@@ -75,12 +85,14 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
                   {exercise.sets.map((set, index) => {
                     return (
                       <input
+                        name={index}
                         key={index}
                         min={1}
                         max={99}
                         defaultValue="1"
                         className="numberInput"
                         type="number"
+                        onChange={handleRepsChange}
                       />
                     );
                   })}
