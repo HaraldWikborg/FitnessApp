@@ -10,9 +10,11 @@ function Blog() {
             <div key={index} className="article">
               <h2>{article.getTitle()}</h2>
               <img src={article.getImage()} alt={article.getTitle()} />
-              <p>{article.getIntro()}</p>
-              <p>{article.getAuthor()}</p>
-              <p>{article.getDate().toDateString()}</p>
+              <p className="intro">{article.getIntro()}</p>
+              <div className="details">
+                <p className="author">{article.getAuthor()}</p>
+                <p className="date">{article.getDate().toDateString()}</p>
+              </div>
             </div>
           );
         })}
