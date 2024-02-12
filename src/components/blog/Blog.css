@@ -1,0 +1,29 @@
+.articlesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.articlesContainer .article {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #4f4841;
+  border-radius: 1rem;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.articlesContainer .article h2 {
+  color: #bd9166;
+  background-color: #2e2925;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+}

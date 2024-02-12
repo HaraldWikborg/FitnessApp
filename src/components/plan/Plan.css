@@ -1,5 +1,5 @@
 .calendarTitle {
-  background-color: #82786f;
+  background-color: #4f4841;
   font-size: 2rem;
   width: fit-content;
   padding: 1rem 2rem;
@@ -9,7 +9,7 @@
 table {
   width: 40%;
   border-radius: 1rem;
-  background-color: #82786f;
+  background-color: #4f4841;
   border-spacing: 0;
 }
 .calendar {
