@@ -10,6 +10,7 @@ import Settings from "./components/settings/Settings";
 import NotFound from "./components/notFound/notFound";
 import Exercise from "./components/exercise/Exercise";
 import LoginForm from "./logIn/login";
+import Article from "./components/article/article";
 
 function App() {
   //localStorage.clear();
@@ -28,6 +29,7 @@ function App() {
           <Route path="/plan" element={<Plan />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/article/:id" element={<Article />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
