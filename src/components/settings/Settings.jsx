@@ -1,7 +1,13 @@
 import React from "react";
 import "./Settings.css";
-
+import { useState, useEffect } from "react";
 function Settings() {
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    setUser(user);
+  }, []);
+
   const handleChangeProfile = () => {
     // Logic to change profile information
   };
@@ -19,10 +25,11 @@ function Settings() {
       <h1>Settings</h1>
       <div className="profileInfo">
         <h3>Profile Information</h3>
-        <p>Name: John Doe</p>
-        <p>Email: </p>
+        <p>Name: {user.name}</p>
+        <p>Email: {user.email}</p>
+        <button onClick={handleChangeProfile}>Edit</button>
       </div>
-      <button onClick={handleChangeProfile}>Change Profile Information</button>
+
       <button onClick={handleLogout} className="logOut">
         Log Out
       </button>

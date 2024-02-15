@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import LoginForm from "../../logIn/login";
 import "./Home.css";
 import { useEffect, useState } from "react";
-import ProfileCard from "../profileCard/profileCard";
+import ProfileCard from "./profileCard/profileCard";
 function Home() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   console.log(user);
