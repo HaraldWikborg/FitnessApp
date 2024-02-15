@@ -1,0 +1,16 @@
+.settingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingPage button {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #bd9166;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
