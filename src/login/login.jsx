@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import "./login.css";
 const LoginForm = ({ user }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -49,7 +49,8 @@ const LoginForm = ({ user }) => {
           </p>
         </>
       ) : (
-        <div>
+        <div className="loginForm">
+          <h1>Login</h1>
           <label>
             Username:
             <input

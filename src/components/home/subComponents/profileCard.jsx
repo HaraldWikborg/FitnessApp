@@ -1,7 +1,7 @@
 import React from "react";
 import "./profileCard.css";
 
-import { profilePic } from "../../../assets/images/svgs.jsx";
+import { profilePic } from "./../../../assets/images/svgs.jsx";
 const ProfileCard = () => {
   // Replace these with your actual profile information
   const profileData = {

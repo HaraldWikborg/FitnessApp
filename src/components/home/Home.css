@@ -4,3 +4,62 @@
   padding: 0.5rem;
   text-align: center;
 }
+
+.weeklyCalendar {
+  background-color: #4f4841;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.weeklyCalendar .weeklyDay {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #2e2925;
+  color: #bd9166;
+  margin: 0.5rem;
+}
+
+.weeklyCalendar .currentDay {
+  background-color: #bd9166;
+  color: #2e2925;
+}
+
+.notLoggedInPage {
+  background-color: #4f4841;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notLoggedInPage h1 {
+  background-color: #bd9166;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.notLoggedInPage p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.notLoggedInPage .loginButton {
+  background-color: #bd9166;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

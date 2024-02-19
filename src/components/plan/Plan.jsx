@@ -37,6 +37,7 @@ const Plan = () => {
   const saveActivities = () => {
     // implement saving activities to a server or storing them locally.
     setCustomSet(true);
+    localStorage.setItem("weeklyActivities", JSON.stringify(activities));
     console.log("Activities saved:", activities);
     alert("Activities saved successfully!");
   };
