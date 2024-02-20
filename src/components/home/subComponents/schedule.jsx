@@ -12,6 +12,10 @@ const Schedule = () => {
   ];
   const currentDay = new Date().getDay();
   const schedule = JSON.parse(localStorage.getItem("weeklyActivities"));
+
+  const handleCalendarClick = (day) => {
+    alert("You clicked on" + day);
+  };
   return (
     <div className="weeklyCalendar">
       {daysOfWeek.map((day, index) => (
@@ -20,6 +24,7 @@ const Schedule = () => {
           className={
             index === currentDay ? "weeklyDay currentDay" : "weeklyDay"
           }
+          onClick={() => handleCalendarClick(day)}
         >
           <h3>{day}</h3>
           <p>{schedule ? schedule[day] : "no plans"}</p>

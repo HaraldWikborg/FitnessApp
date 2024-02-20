@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import LoginForm from "../../logIn/login";
 import "./Home.css";
 import { useEffect, useState } from "react";
 import ProfileCard from "./subComponents/profileCard";
@@ -16,14 +15,16 @@ function Home() {
           <Schedule />
         </>
       ) : (
-        <div className="notLoggedInPage">
-          <h1>Welcome!</h1>
-          <p>Please log in to continue.</p>
-          <NavLink to={"/login"}>
-            <div className="button loginButton" user="user">
-              Log in
-            </div>
-          </NavLink>
+        <div className="container">
+          <div className="notLoggedInPage">
+            <h1>Welcome!</h1>
+            <p>Please log in to continue.</p>
+            <NavLink className="navLinkB" to={"/login"}>
+              <div className="button" user="user">
+                Log in
+              </div>
+            </NavLink>
+          </div>
         </div>
       )}
     </div>

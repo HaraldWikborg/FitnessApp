@@ -39,7 +39,7 @@ const LoginForm = ({ user }) => {
     }
   }, []);
   return (
-    <div>
+    <div className="loginPage">
       {user ? (
         <>
           <p>Welcome, {username}!</p>
