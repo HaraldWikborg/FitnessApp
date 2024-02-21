@@ -95,7 +95,7 @@ const NewRoutine = ({ routines, setRoutines, setAdd }) => {
                         key={index}
                         min={1}
                         max={99}
-                        defaultValue="1"
+                        defaultValue="8"
                         className="numberInput"
                         type="number"
                         onChange={handleRepsChange}

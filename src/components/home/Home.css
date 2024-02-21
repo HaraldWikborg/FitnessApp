@@ -5,6 +5,8 @@
   text-align: center;
 }
 
+/* WeeklyCalendar.css */
+
 .weeklyCalendar {
   background-color: #4f4841;
   border-radius: 8px;
@@ -23,12 +25,25 @@
   background-color: #2e2925;
   color: #bd9166;
   margin: 0.5rem;
+  transition: padding 0.3s ease;
 }
 
 .weeklyCalendar .currentDay {
   background-color: #bd9166;
   color: #2e2925;
 }
+
+.weeklyCalendar .weeklyDay:hover {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.weeklyCalendar .selectedDay {
+  background-color: #ff6c17;
+  color: #2e2925;
+}
+
+/* Login Page */
 
 .notLoggedInPage {
   background-color: #4f4841;
