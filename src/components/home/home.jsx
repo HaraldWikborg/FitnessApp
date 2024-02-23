@@ -5,7 +5,6 @@ import ProfileCard from "./subComponents/profileCard";
 import Schedule from "./subComponents/schedule";
 function Home() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
-  console.log(user);
   return (
     <div className="home">
       {user ? (

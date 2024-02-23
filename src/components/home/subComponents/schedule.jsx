@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Schedule = () => {
   const daysOfWeek = [
@@ -59,7 +59,11 @@ const Schedule = () => {
         >
           <h3>{day}</h3>
           <p>{schedule ? schedule[day] : "no plans"}</p>
-          <select hidden={true} onChange={(e) => handleRoutineChange(e)}>
+          <select
+            id={"selectRoutine" + day}
+            hidden={true}
+            onChange={(e) => handleRoutineChange(e)}
+          >
             <option value="Chest">Chest</option>
             <option value="Back">Back</option>
             <option value="Legs and shoulders">Legs and shoulders</option>
