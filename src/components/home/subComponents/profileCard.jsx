@@ -26,6 +26,10 @@ const ProfileCard = () => {
   }, []);
   const addProfileInfo = () => {
     // Add profile info
+    const profileForm = document.querySelector(".profile-details-form");
+    const noProfileInfo = document.querySelector(".no-profile-info");
+    noProfileInfo.hidden = true;
+    profileForm.hidden = false;
   };
   return (
     <div className="profile-card">
@@ -40,7 +44,7 @@ const ProfileCard = () => {
           profilePic()
         )}
       </div>
-      {profileData.username ? (
+      {profileData.name ? (
         <div className="profile-details">
           <h2>{profileData.name}</h2>
           <p>Age: {profileData.age}</p>
@@ -48,11 +52,16 @@ const ProfileCard = () => {
           <p>Height: {profileData.height}</p>
         </div>
       ) : (
-        <div className="profile-details">
-          <h2>No Profile info</h2>
-          <button onClick={addProfileInfo} className="button">
-            Add Profile info
-          </button>
+        <div className="profile-details-add">
+          <div className="no-profile-info" hidden={false}>
+            <h2>No Profile info</h2>
+            <button onClick={addProfileInfo} className="button">
+              Add Profile info
+            </button>
+          </div>
+          <div className="profile-details-form" hidden={true}>
+            <AddProfile setProfileData={setProfileData} />
+          </div>
         </div>
       )}
     </div>

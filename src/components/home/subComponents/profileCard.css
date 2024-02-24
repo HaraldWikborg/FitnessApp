@@ -25,3 +25,79 @@ p {
   margin: 8px 0;
   font-size: large;
 }
+
+/* Add profile form */
+.add-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #2e2925;
+}
+.add-profile h2 {
+  background-color: #bd9166;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.add-profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #bd9166;
+}
+
+.add-profile-form input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.add-profile-form button {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: large;
+  border: none;
+  background-color: #bd9166;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.no-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bd9166;
+  background-color: #2e2925;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.no-profile-info button {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: large;
+  border: none;
+  background-color: #bd9166;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-details-add {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddProfile = () => {
+const AddProfile = ({ setProfileData }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
@@ -9,17 +9,30 @@ const AddProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log("Submitted:", { name, age, weight });
+    if (!name || !age || !weight || !height) {
+      alert("Please fill out all fields");
+      return;
+    }
+    if (age < 0 || weight < 0 || height < 0) {
+      alert("Please enter valid values for age, weight and height");
+      return;
+    }
+    setProfileData({ name, age, weight, height });
+    localStorage.setItem(
+      "profile",
+      JSON.stringify({ name, age, weight, height })
+    );
     // Reset form fields
     setName("");
     setAge("");
     setWeight("");
+    setHeight("");
   };
 
   return (
-    <div>
+    <div className="add-profile">
       <h2>Add Profile</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="add-profile-form" onSubmit={handleSubmit}>
         <label>
           Name:
           <input
@@ -46,6 +59,7 @@ const AddProfile = () => {
             onChange={(e) => setWeight(e.target.value)}
           />
         </label>
+        <br />
         <label>
           Height:
           <input
